@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>App</title>
+    <!-- Bootswatch Theme -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/App.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">Users App</a>
+    </nav>
+
+    <div class="container">
+        <!-- APPLICATION -->
+        <div id="App" class="row pt-5">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Add User</h4>
+                    </div>
+                    <form id="users-form" class="card-body">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="lastname" placeholder="Last Name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Email" class="form-control" required>
+                        </div>                   
+                        <div class="form-group">
+                            <input type="date" id="birthdate" placeholder="Birth Date" class="form-control">
+                        </div>                                
+
+                        <input type="submit" value="Save" class="btn btn-primary btn-block">
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <table class="table">
+
+                    <thead>
+                        <tr>
+                            <td>Id</td>
+                            <td>Nombre</td>
+                            <td>Apellido</td>
+                            <td>Email</td>
+                            <td>F.Nacimiento</td>
+                            <td>Acciones</td>
+                        </tr>
+                    </thead>
+
+                    <tbody id="users-list" >
+
+                    </tbody>                    
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/Api.js"></script>
+    <script src="assets/js/User.js"></script>
+    <script src="assets/js/App.js"></script>
+</body>
+
+</html>
